@@ -3,8 +3,8 @@ import pickle
 from sklearn.model_selection import RepeatedKFold
 
 #---------------importing csv file-----------------
-data_train=pd.read_csv('C:/dataset/76+197/76+197train.csv', engine='python')
-data_test=pd.read_csv('C:/dataset/76+197/76+197test.csv')
+data_train=pd.read_csv('76+197train.csv', engine='python')
+data_test=pd.read_csv('76+197test.csv')
 #---------------creating copy of the file--------------
 data_train1=data_train.copy()
 data_test1=data_test.copy()

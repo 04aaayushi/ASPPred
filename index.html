@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antisepsis prediction model</title>
+  <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  </head>
+
+<body>
+<div class="header">
+  <h1>ASPPred</h1>
+  <p>A web server to predict anti-sepsis peptides.</p>
+</div>
+<div class="navbar">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
+<div class="row">
+  <div class="side">
+      Something about antisepsis peptides:
+One of the oldest and most elusive syndromes in medicine leading to deaths amongst
+hospitalized patients in the intensive care unit (ICU) is Sepsis, an ill-defined disease
+characterized by complex and time-dependent pathophysiological processes. Advances
+in the understanding of the pathophysiology of sepsis, which is characterized as a host
+reaction to infection involving not only the activation of pro- and anti-inﬂammatory
+responses but also modiﬁcations in non-immunological pathways (cardiovascular, autonomic,
+neurological, hormonal, metabolic and clotting), have led experts to revise the deﬁnitions.
+  </div>
+  <div class="main">
+
+      <form action="/predict" target="_self" method="post">
+      <h2>ENTER PEPTIDE SEQUENCE</h2>
+      <input type="text" name="sequence" placeholder="Enter FASTA sequence" required="required"/>
+      <a href="/predict"></a><button type="submit" class="btn btn-primary"> PREDICT</button></a>
+      <button type="reset" class="btn btn-primary">RESET</button>
+      <br><br>
+          The peptide is:<b> {{text}}</b>
+      </form>
+
+  </div>
+</div>
+</body>
+</html>
+
+
+

@@ -2,5 +2,4 @@ numpy
 sklearn
 requests
 flask
-pandas
-wsgi 
+pandas 

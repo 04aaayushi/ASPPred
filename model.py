@@ -3,8 +3,8 @@ import pandas as pd
 from sklearn.model_selection import RepeatedKFold
 from sklearn.ensemble import RandomForestClassifier
 
-data_train = pd.read_csv('C:/dataset/76+197/76+197train.csv')
-data_test = pd.read_csv('C:/dataset/76+197/76+197test.csv')
+data_train = pd.read_csv('76+197train.csv')
+data_test = pd.read_csv('76+197test.csv')
 
 data_train1 = data_train.copy()
 data_test1 = data_test.copy()

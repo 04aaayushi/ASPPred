@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "http://127.0.0.1:5000"
+url = "http://127.0.0.1:5000/"
 # sample data
 data = {'NET CHARGE': 4
       , 'A': 0.0

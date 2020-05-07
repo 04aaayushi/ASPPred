@@ -1,1 +1,1 @@
-web: run model_flask 
+web: app

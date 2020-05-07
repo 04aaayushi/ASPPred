@@ -1,8 +1,8 @@
 # Import libraries
 import numpy as np
-from flask import Flask, request
+from Flask import Flask, request
 from model import model
-from flask import render_template
+from Flask import render_template
 
 
 app = Flask(__name__)

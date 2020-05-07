@@ -3,5 +3,4 @@ sklearn
 requests
 flask
 pandas
-json
 wsgi 

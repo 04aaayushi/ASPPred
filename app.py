@@ -4,16 +4,14 @@ from Flask import Flask, request
 from model import model
 from Flask import render_template
 
-
 app = Flask(__name__)
 
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
     return render_template('index.html')
 
 
-@app.route('/predict', methods=['GET', 'POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     # Get the data from the POST request.
     seq = request.form.get("sequence")
@@ -83,4 +81,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(debug = True)

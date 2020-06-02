@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antisepsis prediction model</title>
+  <script language="JavaScript">
+     function check() {
+        var d = document.forms["data"]["sequence"].value;
+        var d = d.toLowerCase();
+        var dd = d.split(""); 
+        for (var i in dd) {
+         if (dd[i] == 'b') {
+          alert("Please enter natural amino acids!");
+          return false;
+          d.focus();
+          break;   
+         }
+         if (dd[i] == 'j') {
+          alert("Please enter natural amino acids!");
+          return false;
+          d.focus();
+          break;   
+         }
+         if (dd[i] == 'o') {
+          alert("Please enter natural amino acids!");
+          return false;
+          d.focus();
+          break;   
+         }
+         if (dd[i] == 'u') {
+          alert("Please enter natural amino acids!");
+          return false;
+          d.focus();
+          break;   
+         }
+         if (dd[i] == 'x') {
+          alert("Please enter natural amino acids!");
+          return false;
+          d.focus();
+          break;   
+         }
+         if (dd[i] == 'z') {
+          alert("Please enter natural amino acids!");
+          return false;
+          d.focus();
+          break;   
+         }
+         
+        }
+     return true;
+     }
+  </script>
+  <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  </head>
+
+<body>
+<div class="header">
+  <h1>ASPPred</h1>
+  <p>A web server to predict anti-sepsis peptides.</p>
+</div>
+<div class="navbar">
+  <a href="/static/about us 2.html" target="_self">About Us</a>
+  <a href="/static/tool.html" target="_self">About Tool</a>
+  <a href="/static/example.html" target="_self">Help</a>
+  <a href="/static/contact.html" target="_self" class="right">Contact Us</a>
+</div>
+<div class="row">
+  <div class="side" align="left">
+One of the oldest and most elusive syndromes in medicine leading to deaths amongst
+hospitalized patients in the intensive care unit (ICU) is Sepsis, an ill-defined disease
+characterized by complex and time-dependent pathophysiological processes. Advances
+in the understanding of the pathophysiology of sepsis, which is characterized as a host
+reaction to infection involving not only the activation of pro- and anti-inﬂammatory
+responses but also modiﬁcations in non-immunological pathways (cardiovascular, autonomic,
+neurological, hormonal, metabolic and clotting), have led experts to revise the deﬁnitions.
+  </div>
+  <div class="main">
+      <img src="/static/what-is-sepsis.jpg" align="right" height=400 width=320>
+      <form name="data" action="/predict" onsubmit="return check()" target="_self" method="post">
+      <h2>ENTER PEPTIDE SEQUENCE</h2>
+      <input type="text" name="sequence" placeholder="Enter Peptide sequence" pattern="[A-Za-z]{4,}" required="required"/>
+      <button type="submit" class="btn btn-primary"> PREDICT</button>
+
+      <button type="reset" class="btn btn-primary">RESET</button>
+      <br><br>
+      <b><i> {{text}}</b></i><br>
+
+      </form>
+
+  </div>
+</div>
+</body>
+</html>
+
+
+
